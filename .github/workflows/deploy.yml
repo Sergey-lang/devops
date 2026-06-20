@@ -59,7 +59,7 @@ jobs:
             docker compose pull
 
             # Перезапускаем всё кроме db
-            docker compose up -d --no-deps back front
+            docker compose --env-file .env.development.compose up -d --no-deps back front
   verify:
     needs: deploy
     runs-on: ubuntu-latest
