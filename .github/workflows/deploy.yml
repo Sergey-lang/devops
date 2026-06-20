@@ -46,7 +46,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             # Вход в директорию проекта на сервере
-            cd /myapp
+            cd myapp
             
             # Вход в Docker Hub НА СЕРВЕРЕ
             # docker login -u ${{secrets.DOCKER_USER}} --password-stdin  ${{secrets.DOCKER_PASS}}
