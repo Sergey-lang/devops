@@ -29,7 +29,7 @@ jobs:
           IMAGE_LATEST: ${{secrets.DOCKER_USER}}/todo-${{matrix.service}}:latest
         run: |
           cd ${{matrix.service}}
-          docker build -t $IMAGE_SHA -t $IMAGE_LATEST .
+          docker build -t $IMAGE_SHA -t $IMAGE_LATEST ${{ matrix.build_args }} .
           docker push $IMAGE_SHA
           docker push $IMAGE_LATEST
 
