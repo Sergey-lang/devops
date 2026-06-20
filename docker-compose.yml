@@ -57,7 +57,6 @@ services:
     #     ответит на healthcheck успешно (используй подходящую condition)
     #   - примонтировать локальную папку с runtime-конфигом внутрь контейнера
     #     по пути /app/config; делаем это READ-ONLY, чтобы контейнер физически
-    #     не мог изменить файл на хосте
 
   front:
     image: "${DOCKERHUB_USERNAME}/todo-front:${IMAGE_TAG}"
