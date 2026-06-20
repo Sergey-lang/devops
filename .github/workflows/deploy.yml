@@ -74,6 +74,7 @@ jobs:
           bash scripts/smoke.sh
 
   notify:
+    needs: [ checks, build, deploy, verify ]
     runs-on: ubuntu-latest
     if: always()
     steps:
