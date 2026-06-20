@@ -6,7 +6,7 @@ on:
 
 jobs:
   checks:
-    uses: ./.github/workflows/typecheck.yaml
+    uses: ./.github/workflows/typecheck.yml
 
   build:
     needs: [ checks ]
